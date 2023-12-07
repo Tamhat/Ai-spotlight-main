@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+  @apply w-[90%] mx-auto max-w-7xl;
+}
+
+.btn-links > a {
+  @apply bg-transparent hover:bg-cyan border border-white dark:border-black py-2 inline-flex items-center justify-center rounded-lg m-1 duration-500 ease-in-out font-medium;
+}
+
+.quill {
+  @apply bg-cyprus/90  dark:bg-white;
+}
+
+.ql-toolbar {
+  border: 0px !important;
+  border-bottom: 1px solid #ccc !important;
+}
+
+.ql-stroke {
+  @apply stroke-white dark:stroke-cyprus !important;
+}
+
+.ql-underline,
+.ql-fill {
+  @apply stroke-white dark:stroke-cyprus !important;
+}
+
+.ql-picker-label {
+  @apply text-white dark:text-cyprus border-none !important;
+}
+
+.ql-container {
+  border: none !important;
+}
+
+table,
+th,
+td {
+  @apply p-5;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.category__box{
+  border: 1px solid rgba(142, 142, 142, 0.519);
+  padding: 7px 20px;
+}
+
+.toolscard__bottom{
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+}
