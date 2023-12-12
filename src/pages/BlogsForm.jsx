@@ -28,7 +28,7 @@ const BlogsForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axiosSecure.post("/blogs", data);
+      const response = await axiosSecure.post("http://localhost:8000/api/v1/blogs", data);
       reset();
       if (response.status === 200) {
         navigate("/blogs");

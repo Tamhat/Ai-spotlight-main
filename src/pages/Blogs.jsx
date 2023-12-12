@@ -7,7 +7,7 @@ const Blogs = () => {
     queryKey: ["featuredTools"],
     queryFn: () =>
       axios
-        .get("https://ai-spotlights-server.vercel.app/blogs")
+        .get("http://localhost:8000/api/v1/blogs/")
         .then((res) => res.data),
   });
 

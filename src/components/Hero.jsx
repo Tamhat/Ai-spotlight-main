@@ -1,4 +1,5 @@
 import Categories from "./Categories";
+import SearchInput from "./SearchInput";
 
 const Hero = () => {
   return (
@@ -11,6 +12,7 @@ const Hero = () => {
       </div>
 
       <div className="mt-5">
+        <SearchInput/>
         <Categories />
       </div>
     </section>

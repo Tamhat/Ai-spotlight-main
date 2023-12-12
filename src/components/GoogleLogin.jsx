@@ -18,7 +18,7 @@ const GoogleLogin = () => {
           userEmail: res.user.email,
           userImage: res.user.photoURL,
         };
-        axios.post("https://ai-spotlights-server.vercel.app/users", saveUser);
+        axios.post("/users", saveUser);
       })
       .catch((err) => {
         showToast(err.message);

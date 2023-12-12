@@ -17,6 +17,7 @@ import ManageBlogs from "../pages/ManageBlogs";
 import UpdateBlog from "../pages/UpdateBlog";
 import ToolsCard from "../components/ToolsCard";
 import Category from "../pages/Category";
+import Search from "../pages/Search";
 
 const router = createBrowserRouter([
   {
@@ -28,11 +29,15 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/search",
+        element: <Search />,
+      },
+      {
         path: "/ai-tools/:category",
         element: <Category />,
       },
       {
-        path: "/blogs",
+        path: "blogs",
         element: <Blogs />,
       },
       // for blogs
@@ -41,7 +46,7 @@ const router = createBrowserRouter([
         element: <DetailsPage />,
         loader: ({ params }) =>
           axios.get(
-            `https://ai-spotlights-server.vercel.app/blogs/${params.title}`
+            `http://localhost:8000/api/v1/blogs/${params.title}`
           ),
       },
       {
@@ -49,7 +54,7 @@ const router = createBrowserRouter([
         element: <UpdateBlog />,
         loader: ({ params }) =>
           axios.get(
-            `https://ai-spotlights-server.vercel.app/blogs/${params.title}`
+            `http://localhost:8000/api/v1/blogs/${params.title}`
           ),
       },
       // for tools
@@ -58,7 +63,7 @@ const router = createBrowserRouter([
         element: <DetailsPage />,
         loader: ({ params }) =>
           axios.get(
-            `https://ai-spotlights-server.vercel.app/tools/${params.title}`
+            `http://localhost:8000/api/v1/tools/${params.title}`
           ),
       },
       {
@@ -66,7 +71,7 @@ const router = createBrowserRouter([
         element: <UpdateTool />,
         loader: ({ params }) =>
           axios.get(
-            `https://ai-spotlights-server.vercel.app/tools/${params.title}`
+            `http://localhost:8000/api/v1/tools/${params.title}`
           ),
       },
     ],
