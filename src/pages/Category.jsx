@@ -11,7 +11,7 @@ const Category = () => {
     queryKey: ["approvedTools"],
     queryFn: () =>
       axios
-        .get("http://localhost:8000/api/v1/tools/approved-tools")
+        .get("https://ai-spotlight-server.vercel.app/api/v1/tools/approved-tools")
         .then((res) => res.data),
   });
 

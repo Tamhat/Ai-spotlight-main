@@ -10,7 +10,7 @@ const SearchInput = () => {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/api/v1/tools/search/${values.keyword}`
+        `https://ai-spotlight-server.vercel.app/api/v1/tools/search/${values.keyword}`
       );
       setValues({ ...values, results: data }); // Assuming the received data is directly the search results array
       navigate("/search");

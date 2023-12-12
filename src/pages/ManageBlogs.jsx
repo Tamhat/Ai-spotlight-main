@@ -8,7 +8,7 @@ const ManageBlogs = () => {
 
   const { isLoading, error, data, refetch } = useQuery({
     queryKey: ["manageBlogs"],
-    queryFn: () => axiosSecure.get("http://localhost:8000/api/v1/blogs").then((res) => res.data),
+    queryFn: () => axiosSecure.get("https://ai-spotlight-server.vercel.app/api/v1/blogs").then((res) => res.data),
   });
 
   if (isLoading)
@@ -37,7 +37,7 @@ const ManageBlogs = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const response = await axiosSecure.delete(`http://localhost:8000/api/v1/blogs/${id}`);
+          const response = await axiosSecure.delete(`https://ai-spotlight-server.vercel.app/api/v1/blogs/${id}`);
           if (response.status === 200) {
             refetch();
             Swal.fire({

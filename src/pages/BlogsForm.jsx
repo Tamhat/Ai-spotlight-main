@@ -28,7 +28,7 @@ const BlogsForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axiosSecure.post("http://localhost:8000/api/v1/blogs", data);
+      const response = await axiosSecure.post("https://ai-spotlight-server.vercel.app/api/v1/blogs", data);
       reset();
       if (response.status === 200) {
         navigate("/blogs");

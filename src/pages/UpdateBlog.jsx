@@ -47,7 +47,7 @@ const UpdateBlog = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axiosSecure.put(`http://localhost:8000/api/v1/blogs/${_id}`, data);
+      const response = await axiosSecure.put(`https://ai-spotlight-server.vercel.app/api/v1/blogs/${_id}`, data);
       if (response.status === 200) {
         navigate("/blogs");
         Swal.fire({
